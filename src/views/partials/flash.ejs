@@ -1,0 +1,31 @@
+<% if (success && success.length) { %>
+  <% success.forEach(message=> { %>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <div>
+        <%= message %>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% }) %>
+      <% } %>
+<% if (warning && warning.length) { %>
+  <% warning.forEach(message=> { %>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <div>
+        <%= message %>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% }) %>
+      <% } %>
+<% if (error && error.length) { %>
+  <% error.forEach(message=> {
+    %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <div>
+         <%= message %>
+      </div>
+       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% }) %>
+      <% } %>

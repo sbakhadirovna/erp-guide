@@ -1,0 +1,49 @@
+<div class="d-flex justify-content-between align-items-center mb-2">
+  <h2>All todos</h2>
+  <% if (currentUser.Role==='admin' ) { %>
+    <a href="/todos/create" class="btn btn-primary" role="button">Add todo</a>
+    <% } %>
+</div>
+<table class=" table table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <% if (currentUser.Role==='admin' ) { %>
+        <th>User</th>
+        <% } %>
+
+          <th>Guide</th>
+          <th>Status</th>
+          <th class="col-3">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% todos.forEach((todo ,i)=> { %>
+      <tr>
+        <th>
+          <%= i+1 %>
+        </th>
+        <% if (currentUser.Role==='admin' ) { %>
+          <td>
+            <%= `${todo.user.firstName} ${todo.user.lastName}` %>
+          </td>
+           <% } %>
+            <td>
+              <%= todo.guide.title %>
+            </td>
+            <td>
+              <%= todo.completed?"Read":"Unread" %>
+            </td>
+            <td class="d-flex  ">
+              <a href="/todos/<%= todo.id %>" class="btn btn-info mx-2 ">view</a>
+              <% if (currentUser.Role==='admin' ) { %>
+                <form action="/todos/<%= todo.id %>/delete" method="post">
+                  <button type="submit" class="btn btn-danger">delete</button>
+                </form>
+                <% } %>
+
+            </td>
+      </tr>
+      <% }) %>
+  </tbody>
+</table>

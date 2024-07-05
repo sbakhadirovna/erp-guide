@@ -1,0 +1,36 @@
+    <h1>Create User</h1>
+    <div class="col-md-6">
+    <form action="/users/create" method="post">
+    <div>
+        <label>Firstname</label>
+        <input type="text" name="firstName" class="form-control">
+    </div>
+    <div>
+        <label>Lastname</label>
+        <input type="text" name="lastName" class="form-control">
+    </div>
+    <div>
+        <label>Age</label>
+        <input type="number" name="age" class="form-control">
+    </div>
+    <div>
+        <label >Role</label>
+        <select name="Role"  class="form-select">
+            <option value="admin">Admin</option>
+            <option value="employee">employee</option>
+        </select>
+    </div>
+    <div>
+        <label >Username</label>
+        <input type="text" name="username" class="form-control">
+    </div>
+    <div>
+        <label >Password</label>
+        <input type="password" name="password" class="form-control">
+    </div>
+    <button class="btn btn-primary mt-3" type="submit"> Submit</button>
+</form>
+</div>
+   
+
+  

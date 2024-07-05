@@ -1,0 +1,47 @@
+[
+  {
+    "id": "aeb6c5d3-a186-4ae8-917a-be469ad96705",
+    "firstName": "John",
+    "lastName": "Doe",
+    "age": 35,
+    "Role": "admin",
+    "username": "john",
+    "password": "$2a$10$SI5JNGIF2iywEdyzZbrly.7ws7S93dkDh4IGE7XU7LVfVcK8bi18e"
+  },
+  {
+    "id": "ee236f33-6742-40fb-a47b-824a3bbe7e3d",
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "age": 23,
+    "Role": "employee",
+    "username": "jane",
+    "password": "$2a$10$SI5JNGIF2iywEdyzZbrly.7ws7S93dkDh4IGE7XU7LVfVcK8bi18e"
+  },
+  {
+    "id": "43f9e730-e4bc-49a8-81fe-ae6efa700e4c",
+    "firstName": "Surayyo",
+    "lastName": "Isoqulova",
+    "age": 23,
+    "Role": "employee",
+    "username": "wer36",
+    "password": "$2a$10$SI5JNGIF2iywEdyzZbrly.7ws7S93dkDh4IGE7XU7LVfVcK8bi18e"
+  },
+  {
+    "id": "4d4f8875-79b4-4565-8eed-d5aa2445d425",
+    "firstName": "avbhh",
+    "lastName": "sdfgh",
+    "age": 23,
+    "Role": "employee",
+    "username": "yyyyy",
+    "password": "$2a$10$SI5JNGIF2iywEdyzZbrly.7ws7S93dkDh4IGE7XU7LVfVcK8bi18e"
+  },
+  {
+    "id": "51f099eb-ce93-48ef-ac7f-a3927c3affcb",
+    "firstName": "fooo",
+    "lastName": "barrrr",
+    "age": 45,
+    "Role": "employee",
+    "username": "bazbaz",
+    "password": "$2a$10$ovFcY9Zpsmqh41cnYg6lC.qrt0X8ZNKCqTkTYgDNMDoFgCTTwnqxy"
+  }
+]

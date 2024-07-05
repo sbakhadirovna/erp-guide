@@ -1,0 +1,30 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="/static/images/logo.png" alt="" width="200">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="nav nav-pills">
+       
+        <% if (currentUser.Role =='admin') { %>
+          <li class="nav-item">
+            <a class="nav-link text-dark <%= page=="users"?'active':'' %>" href="/users/list">Users</a>
+          </li>
+        <% } %>
+        <li class="nav-item">
+          <a class="nav-link text-dark <%= page=="guides"?'active':'' %>" href="/guides/list">Guide</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark <%= page=="todos"?'active':'' %>" href="/todos/list">Notifications</a>
+        </li>
+      </ul>
+    </div>
+    <form class="d-flex" role="search" action="/logout" method="post">
+      <button class="btn btn-danger" type="submit">Logout</button>
+    </form>
+  </div>
+</nav>

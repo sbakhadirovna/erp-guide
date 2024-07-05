@@ -1,0 +1,37 @@
+<div class="d-flex justify-content-between align-items-center mb-2">
+  <h2>All guides</h2>
+  <% if (currentUser.Role==='admin' ) { %>
+    <a href="/guides/create" class="btn btn-primary" role="button">Create Guide</a>
+    <% } %>
+</div>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th class="col-6">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% guide.forEach((guide ,i)=> { %>
+      <tr>
+        <th>
+          <%= i+1 %>
+        </th>
+        <td>
+          <%= guide.title %>
+        </td>
+        <td class="d-flex">
+          <a href="/guides/<%= guide.id %>" class="btn btn-info mx-2">view</a>
+          <% if (currentUser.Role=='admin' ) { %>
+            <a href="/guides/<%= guide.id %>/edit" class="btn btn-warning mx-2">edit</a>
+            <form action="/guides/<%= guide.id %>/delete" method="post">
+              <button type="submit" class="btn btn-danger mx-2">delete</button>
+            </form>
+            <% } %>
+
+        </td>
+      </tr>
+      <% }) %>
+  </tbody>
+</table>
